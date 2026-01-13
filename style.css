@@ -1,0 +1,58 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #eef6ee;
+}
+
+/* кустик */
+.plant {
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+/* стебель */
+.stem {
+  width: 10px;
+  height: 0;
+  background: green;
+  margin: 0 auto;
+  transition: height 1s;
+}
+
+/* цветок */
+.flower {
+  width: 30px;
+  height: 30px;
+  background: pink;
+  border-radius: 50%;
+  margin: 0 auto;
+  transform: scale(0);
+  transition: transform 1s, opacity 1s;
+}
+
+/* 1 этап — бутон */
+.bud .stem {
+  height: 10px;
+}
+.bud .flower {
+  transform: scale(0.4);
+}
+
+/* 2 этап — рост */
+.grow .stem {
+  height: 80px;
+}
+.grow .flower {
+  transform: scale(1);
+}
+
+/* 3 этап — смерть */
+.dead .stem {
+  height: 30px;
+  background: brown;
+}
+.dead .flower {
+  opacity: 0;
+}
